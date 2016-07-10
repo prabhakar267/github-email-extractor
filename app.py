@@ -2,17 +2,18 @@
 # @Author: prabhakar
 # @Date:   2016-07-09 21:06:19
 # @Last Modified by:   Prabhakar Gupta
-# @Last Modified time: 2016-07-10 16:44:17
+# @Last Modified time: 2016-07-10 19:04:06
 
+import json
 import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings()
 
-import redis
 from flask import Flask, abort, request
 from flask.ext.cors import CORS
 
 import github_email
 
+EMAIL_FILE = "email_file"
 app = Flask(__name__)
 CORS(app)
 
@@ -20,19 +21,25 @@ CORS(app)
 def main():
     if request.method == 'GET':
         abort(404)
-    else :
-        github_username = request.form.get('username').encode('ascii', 'ignore')
-        red = redis.StrictRedis(host='localhost', port=6379, db=0)
-        red_email = red.hget('email_list', github_username)
+    else:
+        github_username = request.form.get('username').lower()
 
-        if red_email:
-            return "{0}".format(red_email)
-        
-        x = github_email.get(github_username)
-        if x['success']:
-            email = x['email'][0]
+        with open(EMAIL_FILE, 'r') as f:
+            email_dict = json.loads(f.read())
+
+        # check if the email was found earlier or not
+        if email_dict.get(github_username):
+            return email_dict[github_username]
+
+        response = github_email.get(github_username)
+        if response['success']:
+            email = response['email'][0]
+
+            # add email to be used in future
+            email_dict[github_username] = email
+            with open(EMAIL_FILE, 'w') as f:
+                json.dump(email_dict, f)
             
-            red.hset('email_list', github_username, email)
             return "{0}".format(email)
         else:
             abort(404)

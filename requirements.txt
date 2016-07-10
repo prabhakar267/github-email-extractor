@@ -3,4 +3,3 @@ Flask==0.10.1
 Flask-Cors==2.1.2
 github-email==0.0.4
 gunicorn==19.6.0
-redis==2.10.5
