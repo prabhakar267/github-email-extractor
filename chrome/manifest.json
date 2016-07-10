@@ -21,7 +21,7 @@
 
 	"permissions": [
 		"activeTab",
-		"https://localhost:5000"
+		"https://github-email-id.herokuapp.com/"
 	],
 	
 	"content_scripts": [
