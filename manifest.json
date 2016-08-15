@@ -32,7 +32,7 @@
 			],
 			"js": [
 				"assets/js/jquery.min.js",
-				"assets/js/show_email.js"
+				"assets/js/show-email.js"
 			]
 		}
 	]
