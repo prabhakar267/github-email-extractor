@@ -1,15 +1,15 @@
 {
 	"manifest_version": 2,
 
-	"name": "GitHub Show Email",
-	"description": "",
-	"short_name": "Show Email",
+	"name": "GitHub Email Extractor",
+	"description": "Chrome extension to fetch the email ID of a user even if they haven't made it public on their GitHub profile. It uses the public commits of the user, they made on the repositories.",
+	"short_name": "GitHub Email Extractor",
 	"version": "1.0.0.1",
 	"author": "Prabhakar Gupta",
-	"homepage_url": "https://github.com/prabhakar267/chrome-github-email",
+	"homepage_url": "https://github.com/prabhakar267/github-email-extractor",
 
 	"browser_action": {
-		"default_title": "GitHub Show Email",
+		"default_title": "GitHub Email Extractor",
 		"default_icon": "assets/images/icon.png"
 	},
 
