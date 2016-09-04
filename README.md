@@ -1,9 +1,15 @@
 # GitHub Email Extractor
 
-> Chrome extension to fetch the email ID of a user even if they haven't made it public on their GitHub profile
+> Browser extension to fetch the email ID of a user even if they haven't made it public on their GitHub profile
 
 [![Chrome Store](https://raw.githubusercontent.com/prabhakar267/github-classifier/master/assets/images/chrome-store.png)](https://chrome.google.com/webstore/detail/github-show-email/pndebicblkfcinlcedagfhjfkkkecibn)
 
+
+## Library Used
+
+> GitHub Email Extractor uses a Python library **github_email** hosted on Heroku server.
+
+> [![PyPI version](https://badge.fury.io/py/github_email.svg)](https://badge.fury.io/py/github_email)
 
 | Before | After |
 | --- | ---|
