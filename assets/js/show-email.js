@@ -2,8 +2,10 @@
 * @Author: prabhakar
 * @Date:   2016-07-10 00:47:28
 * @Last Modified by:   Prabhakar Gupta
-* @Last Modified time: 2016-07-10 01:29:49
+* @Last Modified time: 2016-09-17 02:26:53
 */
+
+var API_URL = "https://github-email-id.herokuapp.com/";
 
 function get_html(email){
     var email_html = 
@@ -20,14 +22,11 @@ $(document).ready(function(){
     var user_information_div = $(document).find('.vcard-details');
 
     if(user_information_div.length && !(user_information_div.find('li[itemprop=email]').length)){
-        var url = "https://github-email-id.herokuapp.com/";
         var username = window.location.pathname.trim();
         username = username.slice(1);
 
-	console.log(username);
-
         $.ajax({
-            url : url,
+            url : API_URL,
             data: {"username" : username},
             type : 'POST',
             success : function(data){
@@ -35,9 +34,6 @@ $(document).ready(function(){
                     email_html = get_html(data);
                     user_information_div.append(email_html);
                 }
-            },
-            error: function(xhr, msg){
-                console.log('Email not found');
             }
         });
     }

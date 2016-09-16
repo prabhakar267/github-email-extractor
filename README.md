@@ -16,8 +16,8 @@
 | ![GitHub Email Extractor](/screenshots/Screenshot%20from%202016-08-16%2000-09-33.png?raw=true) | ![GitHub Email Extractor](/screenshots/Screenshot%20from%202016-08-16%2000-05-54.png?raw=true) |
 
 ## Other GitHub Extensions
-+ [GitHub Classifier](https://github.com/prabhakar267/github-classifier)
 + [Follow Me or Not](https://github.com/mkstn/follow-me-or-not)
++ [GitHub Classifier [Deprecated]](https://github.com/prabhakar267/github-classifier)
 
 
 --------------------------
