@@ -24,6 +24,9 @@ $(document).ready(function(){
     if(user_information_div.length && !(user_information_div.find('li[itemprop=email]').length)){
         var username = window.location.pathname.trim();
         username = username.slice(1);
+        if (username.substr(-1) == '/'){
+            username = username.substring(0, username.length-1);
+        }
 
         $.ajax({
             url : API_URL,

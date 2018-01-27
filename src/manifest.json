@@ -21,6 +21,7 @@
 
 	"permissions": [
 		"activeTab",
+		"tabs",
 		"https://github-email-id.herokuapp.com/"
 	],
 	
@@ -35,5 +36,9 @@
 				"assets/js/show-email.js"
 			]
 		}
-	]
+	],
+
+	"background": {
+		"scripts": ["assets/js/background.js"]
+	}
 }
