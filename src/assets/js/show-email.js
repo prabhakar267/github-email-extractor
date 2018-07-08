@@ -1,10 +1,3 @@
-/*
-* @Author: prabhakar
-* @Date:   2016-07-10 00:47:28
-* @Last Modified by:   Prabhakar Gupta
-* @Last Modified time: 2016-09-17 02:26:53
-*/
-
 var API_URL = "https://github-email-id.herokuapp.com/";
 
 function get_html(email){
@@ -29,9 +22,8 @@ $(document).ready(function(){
         }
 
         $.ajax({
-            url : API_URL,
-            data: {"username" : username},
-            type : 'POST',
+            url : API_URL + username,
+            type : 'GET',
             success : function(data){
                 if(validateEmail(data)){
                     email_html = get_html(data);
