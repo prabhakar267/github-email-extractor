@@ -24,7 +24,7 @@
 		"tabs",
 		"https://github-email-id.herokuapp.com/"
 	],
-	
+
 	"content_scripts": [
 		{
 			"matches": [
@@ -32,7 +32,6 @@
 				"http://github.com/*"
 			],
 			"js": [
-				"assets/js/jquery.min.js",
 				"assets/js/show-email.js"
 			]
 		}
