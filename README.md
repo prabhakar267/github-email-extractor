@@ -2,11 +2,21 @@
 
 > Browser extension to display email ID of any GitHub user (even if it isn't public on their GitHub profile by getting information from GitHub user's commits, owned repository commit activity)
 
-[![Chrome Store](https://raw.githubusercontent.com/prabhakar267/github-classifier/master/assets/images/chrome-store.png)](https://chrome.google.com/webstore/detail/github-show-email/pndebicblkfcinlcedagfhjfkkkecibn)
-
 | Before | After |
 | --- | ---|
 | ![GitHub Email Extractor](/.github/screenshots/Screenshot%20from%202016-08-16%2000-09-33.png?raw=true) | ![GitHub Email Extractor](/.github/screenshots/Screenshot%20from%202016-08-16%2000-05-54.png?raw=true) |
+
+
+## Manual installation
+
+Due to a takedown from the Chrome Store you can only install this extension manually.
+
++ Clone the repo somewhere: `git clone https://github.com/prabhakar267/github-email-extractor.git`
++ Open: [`chrome://extensions`](chrome://extensions)
++ (Activate developer mode in top right corner, if turned off)
++ Click `Load unpacked` button in top left corner
++ Select the `src` directory of this repo (which you cloned to your local system in step 1)
+
 
 
 ## How it works
