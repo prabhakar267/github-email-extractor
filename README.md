@@ -4,7 +4,9 @@
 
 | Before | After |
 | --- | ---|
-| ![GitHub Email Extractor](/.github/screenshots/Screenshot%20from%202016-08-16%2000-09-33.png?raw=true) | ![GitHub Email Extractor](/.github/screenshots/Screenshot%20from%202016-08-16%2000-05-54.png?raw=true) |
+| ![GitHub Email Extractor](/.github/screenshots/Screenshot%20from%202016-08-16%2000-09-33.png?raw=true)] |
+|
+| [GitHub Email Extractor][!](/.github/screenshots/Screenshot%20from%202016-08-16%2000-05-54.png?raw=true)[X]|
 
 
 ## Manual installation
